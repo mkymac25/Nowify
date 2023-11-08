@@ -172,9 +172,9 @@ export default {
           title: this.playerResponse.item.album.name,
           image: this.playerResponse.item.album.images[0].url
         },
-        trackArtists: 'PAUSED',
-        trackId: this.playerResponse.item.id,
-        trackTitle: this.playerResponse.item.name
+        trackArtists: '',
+        trackId: '',
+        trackTitle: 'PAUSED'
       }
     },
 
