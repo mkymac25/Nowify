@@ -207,7 +207,7 @@ export default {
        * Player is active, but user has paused.
        */
       if (this.playerResponse.is_playing === false) {
-        this.playerData = this.getEmptyPlayer()
+       /* this.playerData = this.getEmptyPlayer() */
 
         return
       }
