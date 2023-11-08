@@ -168,12 +168,13 @@ export default {
     getPausedPlayer() {
       return {
         playing: true,
-        trackAlbum: this.playerResponse.item.artists.map(
-          artist => artist.name
-        ),
-        trackArtists: [],
-        trackId: '',
-        trackTitle: 'Paused'
+        trackAlbum: {
+          title: this.playerResponse.item.album.name,
+          image: this.playerResponse.item.album.images[0].url
+        },
+        trackArtists: 'PAUSED',
+        trackId: this.playerResponse.item.id,
+        trackTitle: this.playerResponse.item.name
       }
     },
 
