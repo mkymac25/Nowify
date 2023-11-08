@@ -167,7 +167,7 @@ export default {
     },
     getPausedPlayer() {
       return {
-        playing: false,
+        playing: true,
         trackAlbum: this.playerResponse.item.artists.map(
           artist => artist.name
         ),
