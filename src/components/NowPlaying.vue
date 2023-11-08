@@ -19,7 +19,7 @@
     </div>
     <div v-else class="now-playing" :class="getNowPlayingClass()">
       <h1 class="now-playing__idle-heading"></h1>
-      <h2 class="now-playing__paused-heading">Paused</h2>
+      <h2 class="now-playing__paused-heading"></h2>
     </div>
   </div>
 </template>
