@@ -223,7 +223,7 @@ export default {
         if (this.playerResponse.item.name === null){
           this.playerData = this.getEmptyPlayer()
         }else{
-          /* this.playerData = this.getPausedPlayer() */
+          this.playerData = this.getPausedPlayer()
         }
         return
       }
