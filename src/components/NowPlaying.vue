@@ -125,7 +125,7 @@ export default {
      * @return {String}
      */
     getNowPlayingClass() {
-      const playerClass = this.player.playing ? 'active' : 'idle' : 'paused'
+      const playerClass = this.player.playing ? 'active' : 'idle'
       return `now-playing--${playerClass}`
     },
 
