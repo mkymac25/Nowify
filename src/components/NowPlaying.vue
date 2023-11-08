@@ -165,6 +165,15 @@ export default {
         trackTitle: ''
       }
     },
+    getPausedPlayer() {
+      return {
+        playing: true,
+        trackAlbum: {},
+        trackArtists: [],
+        trackId: '',
+        trackTitle: ''
+      }
+    },
 
     /**
      * Poll Spotify for data.
@@ -208,7 +217,7 @@ export default {
        * Player is active, but user has paused.
        */
       if (this.playerResponse.is_playing === false) {
-       /* this.playerData = this.getEmptyPlayer() */
+       this.playerData = this.getPausedPlayer()
 
         return
       }
