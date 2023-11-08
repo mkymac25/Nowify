@@ -125,7 +125,7 @@ export default {
      * @return {String}
      */
     getNowPlayingClass() {
-      const playerClass = this.player.playing ? 'active' : 'idle' 
+      const playerClass = this.player.playing ? 'active' : 'idle' : 'paused'
       return `now-playing--${playerClass}`
     },
 
@@ -167,11 +167,11 @@ export default {
     },
     getPausedPlayer() {
       return {
-        playing: true,
+        playing: false,
         trackAlbum: {},
         trackArtists: [],
         trackId: '',
-        trackTitle: ''
+        trackTitle: 'Paused'
       }
     },
 
