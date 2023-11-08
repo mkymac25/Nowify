@@ -19,7 +19,7 @@
     </div>
     <div v-else class="now-playing" :class="getNowPlayingClass()">
       <h1 class="now-playing__idle-heading"></h1>
-      <h2 class="now-playing__paused-heading">Paused</h2>
+      <h2 class="now-playing__paused-heading">No Active Session</h2>
     </div>
   </div>
 </template>
@@ -168,7 +168,9 @@ export default {
     getPausedPlayer() {
       return {
         playing: false,
-        trackAlbum: {},
+        trackAlbum: this.playerResponse.item.artists.map(
+          artist => artist.name
+        ),
         trackArtists: [],
         trackId: '',
         trackTitle: 'Paused'
@@ -220,7 +222,7 @@ export default {
         if (this.playerResponse.item.name === null){
           this.playerData = this.getEmptyPlayer()
         }else{
-         /* this.playerData = this.getPausedPlayer() */
+          this.playerData = this.getPausedPlayer() 
         }
         return
       }
