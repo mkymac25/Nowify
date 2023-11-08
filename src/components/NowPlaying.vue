@@ -18,8 +18,8 @@
       </div>
     </div>
     <div v-else class="now-playing" :class="getNowPlayingClass()">
-      <h1 class="now-playing__idle-heading">Paused</h1>
-      <h2 class="now-playing__paused-heading"></h2>
+      <h1 class="now-playing__idle-heading"></h1>
+      <h2 class="now-playing__paused-heading">Paused</h2>
     </div>
   </div>
 </template>
@@ -125,7 +125,7 @@ export default {
      * @return {String}
      */
     getNowPlayingClass() {
-      const playerClass = this.player.playing ? 'active' : 'idle' : 'paused'
+      const playerClass = this.player.playing ? 'active' : 'idle' 
       return `now-playing--${playerClass}`
     },
 
