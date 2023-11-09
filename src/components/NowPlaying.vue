@@ -175,6 +175,8 @@ export default {
         trackArtists: 'paused',
         trackId: 'Puased',
         trackTitle: 'PAUSED'
+        this.playerResponse.item.name = trackTitle
+        this.playerResponse.item.id = trackId
       }
     },
 
