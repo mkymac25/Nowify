@@ -167,13 +167,13 @@ export default {
     },
     getPausedPlayer() {
       return {
-        playing: false,
+        playing: true,
         trackAlbum: {
           title: this.playerResponse.item.album.name,
           image: this.playerResponse.item.album.images[0].url
         },
-        trackArtists: '',
-        trackId: '',
+        trackArtists: 'paused',
+        trackId: 'Puased',
         trackTitle: 'PAUSED'
       }
     },
