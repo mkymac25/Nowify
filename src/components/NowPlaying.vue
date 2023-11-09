@@ -175,7 +175,7 @@ export default {
         trackArtists: 'paused',
         trackId: 'Puased',
         trackTitle: 'PAUSED'
-        this.player.trackTitle = trackTitle
+        this.player.trackTitle: trackTitle
       }
     },
 
